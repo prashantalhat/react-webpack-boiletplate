@@ -1,5 +1,5 @@
 
-**Why Babel?
+**Why Babel?**
 
 Babel enables you writing your code in ES6. With Babel the code will get transpiled back to ES5. 
 So that every browser, without having all ES6 features implemented, can intepret it.
@@ -20,7 +20,7 @@ Browser doesnt support jsx natively.
 `npm install --save-dev babel-preset-react`
 
 
-**Hot Module Replacement in React
+**Hot Module Replacement in React**
 
 A huge development boost will give you react-hot-loader (Hot Module Replacement). 
 It will shorten your feedback loop during development. 
@@ -30,7 +30,7 @@ Basically whenever you change something in your source code, the change will app
 `npm install --save-dev react-hot-loader`
 
 
-**Linting
+**Linting**
 
 Coding standards
 Using Airbnb coding practices
