@@ -28,5 +28,40 @@ It will shorten your feedback loop during development.
 Basically whenever you change something in your source code, the change will apply in your app running in the browser without reloading the entire page.
 
 npm install --save-dev react-hot-loader
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Linting
 
+Coding standards
+Using Airbnb coding practices
+
+npm install eslint eslint-config-airbnb --save-dev
+
+You'll also need some dependencies for working with ES6:
+
+npm install eslint-plugin-jsx-a11y@^2.0.0 eslint-plugin-react eslint-plugin-import babel-eslint --global
+
+To prevent unnecessary warnings, "func-names" is manually switched off here because Airbnb's JS style guide allows anonymous functions.
+
+.eslintrc file looks like this
+
+`{
+  "extends": "airbnb",
+  "rules": {
+    "func-names": ["error", "never"]
+  }
+}`
+
+to fix few eslint issues I used
+https://stackoverflow.com/questions/30398825/eslint-window-is-not-defined-how-to-allow-global-variables-in-package-json
+
+allow jsx file extensions
+https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In future commits
+TODO:
+1) CSS processing
+2) Unit testing
+3) Styleguide
+4) Automation testing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
