@@ -1,4 +1,9 @@
 
+This repository is setup using 
+
+https://www.robinwieruch.de/minimal-react-webpack-babel-setup/
+
+
 **Why Babel?**
 
 Babel enables you writing your code in ES6. With Babel the code will get transpiled back to ES5. 
@@ -60,11 +65,13 @@ allow jsx file extensions
 
 https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**CSS Processing**
+https://medium.com/@Connorelsea/using-sass-with-create-react-app-7125d6913760
+
+**TODO**
 In future commits
-TODO:
-1) CSS processing
-2) Unit testing
-3) Styleguide
-4) Automation testing
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1) Unit testing
+2) Styleguide
+3) Automation testing
+
