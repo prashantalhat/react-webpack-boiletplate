@@ -1,11 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './css/main.scss';
+import { Provider } from 'react-redux'
+import { createStore } from 'redux';
+
+import GiphySerachApp from './reducers';
+import App from './components/App';
+
+import './styles/main.scss';
+
+const store = createStore(GiphySerachApp);
 
 const title = 'My minimal React Webpack Babel Setup';
 
 ReactDOM.render(
-  <div className="container">{title}</div>,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('app'),
 );
 

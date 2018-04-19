@@ -69,9 +69,13 @@ https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-file
 **CSS Processing**
 https://medium.com/@Connorelsea/using-sass-with-create-react-app-7125d6913760
 
+https://www.npmjs.com/package/extract-text-webpack-plugin
+
+
 **TODO**
 In future commits
-1) Unit testing
+1) Redux
+2) Unit testing
 2) Styleguide
 3) Automation testing
 
