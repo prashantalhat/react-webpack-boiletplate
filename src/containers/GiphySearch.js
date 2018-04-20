@@ -9,6 +9,19 @@ const mapStateToProps = (state) => ({
     apiError: state.apiError
 });
 
+const getObjectFromJson = response => response.json();
+
+const throwIfNotOk = response => {
+  if (!response.ok) {
+    throw Error(response.statusText);
+  }
+  return response;
+};
+
+const sleep = (msecs) => (
+  results => new Promise(resolve => setTimeout(() => resolve(results), msecs))
+);
+
 const mapDispatchToProps = (dispatch) => ({
     onSearchTermChange: (searchTerm) => {
         dispatch({
@@ -25,11 +38,14 @@ const mapDispatchToProps = (dispatch) => ({
         // send api call to get image url
         const url = `https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=${encodedQuery}`;
         fetch(url)
+            .then(throwIfNotOk)
+            .then(getObjectFromJson)
+            .then(sleep(1000))
             .then((response) => {
                 console.log('giphy response', response);
                 dispatch({
                     type: Actions.GIPHY_REQUEST_SUCESS,
-                    ...response.data.fixed_height_downsampled_url
+                    imageUrl: response.data.fixed_height_downsampled_url
                 });
             })
             .catch((error) => {
